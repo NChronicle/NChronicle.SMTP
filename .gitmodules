@@ -1,0 +1,3 @@
+[submodule "NChronicle.SMTP.Wiki"]
+	path = _Wiki
+	url = git@git.ikimi.co:NChronicle/NChronicle.SMTP.wiki

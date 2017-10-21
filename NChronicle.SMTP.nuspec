@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>NChronicle.SMTP</id>
     <title>NChronicle.SMTP</title>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <authors>Andy James</authors>
     <owners>Andy James</owners>
-    <licenseUrl>https://git.ikimi.co/andrewj/NChronicle/raw/master/LICENSE</licenseUrl>
-    <projectUrl>https://git.ikimi.co/andrewj/NChronicle</projectUrl>
-    <iconUrl>https://git.ikimi.co/uploads/project/avatar/2/NChronicle_simple_square.png</iconUrl>
+    <licenseUrl>https://git.npanda.io/NChronicle/NChronicle.SMTP/raw/master/LICENSE</licenseUrl>
+    <projectUrl>https://git.npanda.io/NChronicle/NChronicle.SMTP</projectUrl>
+    <iconUrl>https://git.npanda.io/uploads/-/system/project/avatar/9/NChronicle_Logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>
 NChronicle is an extensible logging and output library allowing centralized management and distribution of log messages to a number of logging destinations (known as 'Libraries'). NChronicle.SMTP is a comprehensive SMTP email Library sending log messages in customizable email messages.
@@ -21,8 +21,8 @@ NChronicle.SMTP is a comprehensive SMTP email Library sending log messages in cu
 Further Libraries planned for the NChronicle logging framework include NChronicle.API and NChronicle.Owin.
     </description>
     <dependencies> 
-      <group targetFramework="net40">
-        <dependency id="NChronicle.Core" version="1.0.2" />
+      <group>
+        <dependency id="NChronicle.Core" version="1.1.0" />
       </group>
     </dependencies>
     <frameworkAssemblies>
@@ -30,14 +30,15 @@ Further Libraries planned for the NChronicle logging framework include NChronicl
       <frameworkAssembly assemblyName="System.Core" targetFramework="net40" />
       <frameworkAssembly assemblyName="System.Xml" targetFramework="net40" />
     </frameworkAssemblies>
-    <language>en-us</language>
+    <language>en-US</language>
     <releaseNotes>
-Initial release.
+Added support for .NET Standard 2.0
     </releaseNotes>
-    <copyright>Copyright 2016</copyright>
+    <copyright>Copyright 2017</copyright>
     <tags>NChronicle Events Audit Logging Log Trail Recording History Tracking Output SMTP Email Iis Output Directory SSL TLS</tags>
   </metadata>
   <files>
-    <file src="bin/Release/NChronicle.SMTP.dll" target="lib\net40" />
+    <file src="bin/Release/netfx4.0/NChronicle.SMTP.dll" target="lib\net40" />
+    <file src="bin/Release/netstandard2.0/NChronicle.SMTP.dll" target="lib\netstandard2.0" />
   </files>
 </package>

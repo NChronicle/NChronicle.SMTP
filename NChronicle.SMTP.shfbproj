@@ -28,7 +28,7 @@
     <SourceCodeBasePath>.\</SourceCodeBasePath>
     <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
     <DocumentationSources>
-      <DocumentationSource sourceFile="NChronicle.SMTP.csproj" />
+      <DocumentationSource sourceFile="NChronicle.SMTP_NetFx.csproj" />
     </DocumentationSources>
     <HelpFileVersion>1.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>

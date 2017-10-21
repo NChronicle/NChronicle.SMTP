@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <RootNamespace>NChronicle.SMTP</RootNamespace>
+    <AssemblyName>NChronicle.SMTP</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="**\*" />
+    <Compile Include="Configuration\SmtpChronicleLibraryConfiguration.cs" />
+    <Compile Include="Delegates\SmtpChronicleLibraryConfigurationDelegate.cs" />
+    <Compile Include="Extensions\ConfigurationExtensions.cs" />
+    <Compile Include="SmtpChronicleLibrary.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NChronicle.Core" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>

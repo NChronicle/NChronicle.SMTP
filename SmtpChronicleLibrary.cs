@@ -62,11 +62,10 @@ namespace NChronicle.SMTP {
 			this.SendToEmail (subjectOutput, bodyOutput, priority);
 		}
 
-		private bool ListenTo (ChronicleRecord record) {
-			return (this._configuration.Levels.Any () && this._configuration.Levels.ContainsKey (record.Level))
-				   && (!this._configuration.Tags.Any () || this._configuration.Tags.Keys.Any (record.Tags.Contains))
-				   && !this._configuration.IgnoredTags.Keys.Any (record.Tags.Contains);
-		}
+		private bool ListenTo (ChronicleRecord record) =>
+            this._configuration.Levels.ContainsKey (record.Level)
+            && ( ! this._configuration.Tags.Any () || this._configuration.Tags.Keys.Any (record.Tags.Contains) ) 
+            && ! this._configuration.IgnoredTags.Keys.Any (record.Tags.Contains);
 
 		private bool Recurrence (ChronicleRecord record) {
 			var hash = (record.Message?.GetHashCode () ?? 0) ^ (record.Exception?.Message?.GetHashCode () ?? 0) ^
@@ -86,8 +85,8 @@ namespace NChronicle.SMTP {
 
 		private string FormulateOutput (ChronicleRecord record, string pattern) {
 			var output = pattern;
-			var currentTime = TimeZoneInfo.ConvertTimeFromUtc (DateTime.UtcNow, this._configuration.TimeZone);
-			foreach (var token in this.FindTokens (pattern)) {
+            var currentTime = TimeZoneInfo.ConvertTime(DateTime.UtcNow, TimeZoneInfo.Utc, this._configuration.TimeZone);
+            foreach (var token in this.FindTokens (pattern)) {
 				var tokenBody = token.Substring (1, token.Length - 2);
 				var tokenIsDate = tokenBody.StartsWith ("%");
 				if (tokenIsDate) {
@@ -198,11 +197,7 @@ namespace NChronicle.SMTP {
 					this._client.Send (email);
 				}
 			}
-			catch (SmtpException e) {
-				if (!this._configuration.SilentTimeout && e.Message.Contains ("timed out")) {
-					throw;
-				}
-			}
+			catch (SmtpException e) when (this._configuration.SilentTimeout && e.Message.Contains("timed out")) { }
 		}
 
 		private MailMessage CreateMailMessage (string subjectOutput, string bodyOutput, MailPriority priority) {

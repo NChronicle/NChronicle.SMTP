@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Meta", "Meta", "{AFC0F0A0-3
 	EndProjectSection
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "NChronicle.SMTP", "NChronicle.SMTP.shfbproj", "{60CA6C73-FE06-4BF8-87E2-86A70AFDF7AC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9DB05077-5BFC-495A-B7FB-9B01C153CDC6} = {9DB05077-5BFC-495A-B7FB-9B01C153CDC6}
+		{AFD35081-4DE2-406C-80BC-73FA62A05AD3} = {AFD35081-4DE2-406C-80BC-73FA62A05AD3}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{14E17A0F-3A50-4C38-8D57-46011FAF2638}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{14E17A0F
 		BuildFormattedWiki.ps1 = BuildFormattedWiki.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NChronicle.SMTP_NetStandard", "NChronicle.SMTP_NetStandard.csproj", "{AFD35081-4DE2-406C-80BC-73FA62A05AD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NChronicle.SMTP_NetStandard", "NChronicle.SMTP_NetStandard.csproj", "{AFD35081-4DE2-406C-80BC-73FA62A05AD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

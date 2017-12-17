@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE;NETFX</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\NChronicle.SMTP.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\netfx4.0\NChronicle.SMTP.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,7 +31,7 @@
     <DefineConstants>TRACE;NETFX</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\NChronicle.SMTP.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\netfx4.0\NChronicle.SMTP.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
